@@ -1,9 +1,29 @@
 /*base*/
-@import "../base/base.css";
-@import "../base/layout.css";
+@import '../base/base.css';
+@import '../base/layout.css';
 
 /*vendors*/
 
 /*components*/
+@import '../components/btn.css';
+@import '../components/form.css';
 
 /*CUSTOM CSS*/
+
+/* HEADER: start */
+/* HEADER: end */
+
+/* HERO: start */
+/* HERO: end */
+
+/* CHOOSE US: start */
+/* CHOOSE US: end */
+
+/* METRICS: start */
+/* METRICS: end */
+
+/* LATEST VIDEO: start */
+/* LATEST VIDEO: end */
+
+/* FOOTER: start */
+/* FOOTER: end */
