@@ -26,10 +26,10 @@
                 "endOfLine": "auto"
             }
         ],
-            "no-console": "error",
-            "func-names": "off",
-            "no-process-exit": "off",
-            "object-shorthand": "off",
-            "class-methods-use-this": "off"
+        "no-console": "error",
+        "func-names": "off",
+        "no-process-exit": "off",
+        "object-shorthand": "off",
+        "class-methods-use-this": "off"
     }
 }
