@@ -1,4 +1,6 @@
 // IMPORTS
+import paslaugos1 from '../components/services.js';
+import paslaugos2 from '../components/services2.js';
 
 // EXECUTION
 
@@ -12,6 +14,8 @@
 /* ABOUT ME: end */
 
 /* SERVICES: start */
+console.log(paslaugos1());
+console.log(paslaugos2());
 /* SERVICES: end */
 
 /* RESUME: start */
