@@ -1,5 +1,20 @@
-function services1() {
-    return 'PASLAUGU 111 HTML...';
+function services(selector, data) {
+    let HTML = '';
+
+    for (const service of data) {
+        HTML += `<div class="service">
+                    <i class="et-line icon-${service.icon}"></i>
+                    <h3 class="service-title">${service.title}</h3>
+                    <p class="service-description">${service.desc}</p>
+                </div>
+`;
+    }
+
+    const servicesDOM = document.getElementById(selector);
+
+    servicesDOM.innerHTML = HTML;
+
+    return;
 }
 
-export default services1;
+export { services };

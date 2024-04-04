@@ -1,6 +1,5 @@
 // IMPORTS
-import paslaugos1 from '../components/services.js';
-import paslaugos2 from '../components/services2.js';
+import { services } from '../components/services.js';
 
 // EXECUTION
 
@@ -14,8 +13,115 @@ import paslaugos2 from '../components/services2.js';
 /* ABOUT ME: end */
 
 /* SERVICES: start */
-console.log(paslaugos1());
-console.log(paslaugos2());
+
+const homeServicesData = [
+    {
+        icon: 'calendar',
+        title: 'Tindiriušku',
+        desc: `Kasmetinis sezono atidarymas su fanfarais ir
+        kruasanais, pagardintas linksmonadu ir
+        šypsenomis.`,
+    },
+    {
+        icon: 'profile-female',
+        title: 'Asbesto fėjos',
+        desc: `Ūkio darbai nešiojant akmenis iš trobos,
+        sijojant žvyrą batuose ir barstant smėlį
+        nepatogu sakyt kur.`,
+    },
+    {
+        icon: 'book-open',
+        title: 'Poezijos pavasaris',
+        desc: `Lyriniai nukrypimai ir prisipažinimai, kaistant
+        atmosferai Eroto glėbyje.`,
+    },
+    {
+        icon: 'piechart',
+        title: 'Pušku-pušku',
+        desc: `Sėdmaišininkų fiesta sėdint ratu aplink laužą ir
+        kilojant kojomis kibirą malkų.`,
+    },
+    {
+        icon: 'anchor',
+        title: 'Vidurvasario baidarių žygis',
+        desc: `Nežabota tradicija tapusi alkofiesta,
+        sutraukianti gausų būrį tarpusavyje nepažįstamų
+        žmonių.`,
+    },
+    {
+        icon: 'scope',
+        title: 'Rudens lygė',
+        desc: `Tas metas, kai ateina laikas skaičiuoti
+        viščiukus ir aiškintis obuolmušių turnyro
+        nugalėtojus.`,
+    },
+];
+
+const allServicesData = [
+    {
+        icon: 'calendar',
+        title: 'Tindiriušku',
+        desc: `Kasmetinis sezono atidarymas su fanfarais ir
+        kruasanais, pagardintas linksmonadu ir
+        šypsenomis.`,
+    },
+    {
+        icon: 'profile-female',
+        title: 'Asbesto fėjos',
+        desc: `Ūkio darbai nešiojant akmenis iš trobos,
+        sijojant žvyrą batuose ir barstant smėlį
+        nepatogu sakyt kur.`,
+    },
+    {
+        icon: 'book-open',
+        title: 'Poezijos pavasaris',
+        desc: `Lyriniai nukrypimai ir prisipažinimai, kaistant
+        atmosferai Eroto glėbyje.`,
+    },
+    {
+        icon: 'piechart',
+        title: 'Pušku-pušku',
+        desc: `Sėdmaišininkų fiesta sėdint ratu aplink laužą ir
+        kilojant kojomis kibirą malkų.`,
+    },
+    {
+        icon: 'anchor',
+        title: 'Vidurvasario baidarių žygis',
+        desc: `Nežabota tradicija tapusi alkofiesta,
+        sutraukianti gausų būrį tarpusavyje nepažįstamų
+        žmonių.`,
+    },
+    {
+        icon: 'scope',
+        title: 'Rudens lygė',
+        desc: `Tas metas, kai ateina laikas skaičiuoti
+        viščiukus ir aiškintis obuolmušių turnyro
+        nugalėtojus.`,
+    },
+    {
+        icon: 'wine',
+        title: 'Hello, vynas!',
+        desc: `Čia ir taip visiems viskas aišku. Oplia,
+        kindzmakarūriai!`,
+    },
+    {
+        icon: 'gift',
+        title: 'Kalėda, Kalėda',
+        desc: `Kas gali būti geriau už židinyje spragsinčią
+        ugnį, pagardintą šaunia draugų kompanija su
+        pirtimi?`,
+    },
+    {
+        icon: 'refresh',
+        title: 'Naujieji Metai',
+        desc: `Senųjų palydėtuvės ir naujųjų sutiktuvės Šimonių
+        girios glūdumoje. Magiškas laiko ratas sukasi atgalios.`,
+    },
+];
+
+services('services_block', homeServicesData);
+services('resume_services_block', allServicesData);
+
 /* SERVICES: end */
 
 /* RESUME: start */
