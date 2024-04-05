@@ -55,49 +55,6 @@ const homeServicesData = [
         viščiukus ir aiškintis obuolmušių turnyro
         nugalėtojus.`,
     },
-];
-
-const allServicesData = [
-    {
-        icon: 'calendar',
-        title: 'Tindiriušku',
-        desc: `Kasmetinis sezono atidarymas su fanfarais ir
-        kruasanais, pagardintas linksmonadu ir
-        šypsenomis.`,
-    },
-    {
-        icon: 'profile-female',
-        title: 'Asbesto fėjos',
-        desc: `Ūkio darbai nešiojant akmenis iš trobos,
-        sijojant žvyrą batuose ir barstant smėlį
-        nepatogu sakyt kur.`,
-    },
-    {
-        icon: 'book-open',
-        title: 'Poezijos pavasaris',
-        desc: `Lyriniai nukrypimai ir prisipažinimai, kaistant
-        atmosferai Eroto glėbyje.`,
-    },
-    {
-        icon: 'piechart',
-        title: 'Pušku-pušku',
-        desc: `Sėdmaišininkų fiesta sėdint ratu aplink laužą ir
-        kilojant kojomis kibirą malkų.`,
-    },
-    {
-        icon: 'anchor',
-        title: 'Vidurvasario baidarių žygis',
-        desc: `Nežabota tradicija tapusi alkofiesta,
-        sutraukianti gausų būrį tarpusavyje nepažįstamų
-        žmonių.`,
-    },
-    {
-        icon: 'scope',
-        title: 'Rudens lygė',
-        desc: `Tas metas, kai ateina laikas skaičiuoti
-        viščiukus ir aiškintis obuolmušių turnyro
-        nugalėtojus.`,
-    },
     {
         icon: 'wine',
         title: 'Hello, vynas!',
@@ -119,8 +76,9 @@ const allServicesData = [
     },
 ];
 
-services('services_block', homeServicesData);
-services('resume_services_block', allServicesData);
+// services('services_block', homeServicesData);
+
+services();
 
 /* SERVICES: end */
 
