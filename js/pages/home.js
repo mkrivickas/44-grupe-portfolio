@@ -77,8 +77,8 @@ const homeServicesData = [
 ];
 
 // services('services_block', homeServicesData);
-
-services();
+services('services_block', [5, 'asd', true, [], services, null, undefined]);
+services('services_block', [{}]);
 
 /* SERVICES: end */
 

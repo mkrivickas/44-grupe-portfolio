@@ -21,10 +21,10 @@ describe('Wrong params: selector', () => {
         expect(services({})).toBe(false);
     });
     test('Selector as function', () => {
-        expect(services(services)).toBe(false);
+        expect(services()).toBe(false);
     });
     test('Selector as empty string', () => {
-        expect(services(services('')).toBe(false);
+        expect(services('')).toBe(false);
     });
 });
 
@@ -60,40 +60,125 @@ describe('Wrong params: data', () => {
 
 describe('Partially invalid params: selector', () => {
     test('No element with id: "a"', () => {
-        const data = [{
-            icon: 'desktop',
-            title: 'Search optimization',
-            desc: 'The9 is a graphically polished, interactive'
-        }];
+        const data = [
+            {
+                icon: 'desktop',
+                title: 'Search optimization',
+                desc: 'The9 is a graphically polished, interactive',
+            },
+        ];
         document.body.innerHTML = '<div></div>';
         expect(services('a', data)).toBe(false);
     });
     test('No element with id: "a"', () => {
-        const data = [{
-            icon: 'desktop',
-            title: 'Search optimization',
-            desc: 'The9 is a graphically polished, interactive'
-        }];
+        const data = [
+            {
+                icon: 'desktop',
+                title: 'Search optimization',
+                desc: 'The9 is a graphically polished, interactive',
+            },
+        ];
         document.body.innerHTML = '<div id="b"></div>';
         expect(services('a', data)).toBe(false);
     });
 });
 
-describe('Valid params: selector', () => {
+describe('Partially invalid params: data', () => {
+    test('All data elements are incorrect type (not true object)', () => {
+        const data = [5, 'asd', true, [], services, null, undefined];
+        document.body.innerHTML = '<div id="a"></div>';
+        const response = services('a', data);
+        expect(response).toBe(true);
+        expect(document.body.querySelectorAll('.service').length).toBe(0);
+        test('Empty object', () => {
+            const data = [{}];
+            document.body.innerHTML = '<div id="a"></div>';
+            const response = services('a', data);
+            expect(response).toBe(true);
+            expect(document.body.querySelectorAll('.service').length).toBe(0);
+        });
+
+        test('Incorrect object: not enough keys (1)', () => {
+            const data = [
+                {
+                    icon: 'desktop',
+                },
+            ];
+            document.body.innerHTML = '<div id="a"></div>';
+            const response = services('a', data);
+            expect(response).toBe(true);
+            expect(document.body.querySelectorAll('.service').length).toBe(0);
+        });
+
+        test('Incorrect object: not enough keys (2)', () => {
+            const data = [
+                {
+                    icon: 'desktop',
+                    title: 'My service',
+                },
+            ];
+            document.body.innerHTML = '<div id="a"></div>';
+            const response = services('a', data);
+            expect(response).toBe(true);
+            expect(document.body.querySelectorAll('.service').length).toBe(0);
+        });
+
+        test('Incorrect object: key names', () => {
+            const data = [
+                {
+                    a: 'desktop',
+                    b: 'My service',
+                    c: 'My service',
+                },
+                {
+                    i: 'desktop',
+                    title: 'My service',
+                    desc: 'My service',
+                },
+                {
+                    icon: 'desktop',
+                    t: 'My service',
+                    desc: 'My service',
+                },
+                {
+                    icon: 'desktop',
+                    title: 'My service',
+                    d: 'My service',
+                },
+            ];
+            document.body.innerHTML = '<div id="a"></div>';
+            const response = services('a', data);
+            expect(response).toBe(true);
+            expect(document.body.querySelectorAll('.service').length).toBe(0);
+        });
+
+        test('Incorrect object: too many keys (4)', () => {
+            const data = [
+                {
+                    icon: 'desktop',
+                    title: 'My service',
+                    desc: 'My service',
+                    extra: 'extra',
+                },
+            ];
+            document.body.innerHTML = '<div id="a"></div>';
+            const response = services('a', data);
+            expect(response).toBe(true);
+            expect(document.body.querySelectorAll('.service').length).toBe(0);
+        });
+    });
+});
+
+describe('Valid params', () => {
     test('Element with id: "a"', () => {
-        const data = [{
-            icon: 'desktop',
-            title: 'Search optimization',
-            desc: 'The9 is a graphically polished, interactive'
-        }];
+        const data = [
+            {
+                icon: 'desktop',
+                title: 'Search optimization',
+                desc: 'The9 is a graphically polished, interactive',
+            },
+        ];
         document.body.innerHTML = '<div id="a"></div>';
         expect(services('a', data)).toBe(true);
     });
 });
-
-// describe('Correct params', () => {
-//     test('No params', () => {
-//         expect(services('a', [])).toBe(undefined);
-//     });
-// });
-

@@ -15,6 +15,22 @@ function services(selector, data) {
     let HTML = '';
 
     for (const service of data) {
+        if (
+            typeof service !== 'object' ||
+            service === null ||
+            Array.isArray(service)
+        ) {
+            continue;
+        }
+
+        const keys = Object.keys(service);
+
+        if (
+            keys.length !== 3
+        ) {
+            continue;
+        }
+
         HTML += `<div class="service">
                     <i class="et-line icon-${service.icon}"></i>
                     <h3 class="service-title">${service.title}</h3>
@@ -24,7 +40,7 @@ function services(selector, data) {
 
     servicesDOM.innerHTML = HTML;
 
-    return;
+    return true;
 }
 
 export { services };
