@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1712609119644" clover="3.2.0">
-  <project timestamp="1712609119644" name="All files">
-    <metrics statements="17" coveredstatements="16" conditionals="17" coveredconditionals="16" methods="1" coveredmethods="1" elements="35" coveredelements="33" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
-    <file name="services.js" path="/Users/cruxman/BIT/44-grupe/44-grupe-portfolio/js/components/services.js">
-      <metrics statements="17" coveredstatements="16" conditionals="17" coveredconditionals="16" methods="1" coveredmethods="1"/>
-      <line num="2" count="20" type="cond" truecount="4" falsecount="0"/>
-      <line num="3" count="7" type="stmt"/>
-      <line num="5" count="13" type="cond" truecount="4" falsecount="0"/>
-      <line num="6" count="9" type="stmt"/>
-      <line num="9" count="4" type="stmt"/>
-      <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="12" count="2" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="17" count="2" type="stmt"/>
-      <line num="18" count="8" type="cond" truecount="2" falsecount="0"/>
-      <line num="23" count="7" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
-      <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="31" count="0" type="stmt"/>
-      <line num="34" count="1" type="stmt"/>
-      <line num="41" count="2" type="stmt"/>
-      <line num="43" count="2" type="stmt"/>
-    </file>
+<coverage generated="1712681238404" clover="3.2.0">
+  <project timestamp="1712681238404" name="All files">
+    <metrics statements="24" coveredstatements="24" conditionals="29" coveredconditionals="28" methods="3" coveredmethods="3" elements="56" coveredelements="55" complexity="0" loc="24" ncloc="24" packages="2" files="2" classes="2"/>
+    <package name="data">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="etLinesIconsData.js" path="/Users/cruxman/BIT/44-grupe/44-grupe-portfolio/data/etLinesIconsData.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="js.components">
+      <metrics statements="23" coveredstatements="23" conditionals="29" coveredconditionals="28" methods="3" coveredmethods="3"/>
+      <file name="services.js" path="/Users/cruxman/BIT/44-grupe/44-grupe-portfolio/js/components/services.js">
+        <metrics statements="23" coveredstatements="23" conditionals="29" coveredconditionals="28" methods="3" coveredmethods="3"/>
+        <line num="4" count="35" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="478" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="22" count="24" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="26" count="18" type="cond" truecount="4" falsecount="0"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
+        <line num="32" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
+        <line num="38" count="7" type="stmt"/>
+        <line num="39" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="7" type="stmt"/>
+        <line num="47" count="18" type="stmt"/>
+        <line num="49" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="58" count="14" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
+        <line num="68" count="7" type="stmt"/>
+        <line num="70" count="7" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

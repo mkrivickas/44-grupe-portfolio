@@ -1,7 +1,28 @@
+import { etLinesIconsData } from '../../data/etLinesIconsData.js';
+
+function isNonEmptyString(str) {
+    return typeof str === 'string' && str.trim() !== '';
+}
+
+function containsAllowedSymbols(str, extraSymbols = '') {
+    const abc =
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 '" +
+        extraSymbols;
+
+    for (const symbol of str) {
+        if (!abc.includes(symbol)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 function services(selector, data) {
     if (typeof selector !== 'string' || selector === '') {
         return false;
     }
+
     if (!Array.isArray(data) || data.length === 0) {
         return false;
     }
@@ -26,7 +47,13 @@ function services(selector, data) {
         const keys = Object.keys(service);
 
         if (
-            keys.length !== 3
+            keys.length !== 3 ||
+            !isNonEmptyString(service.icon) ||
+            !isNonEmptyString(service.title) ||
+            !isNonEmptyString(service.desc) ||
+            !containsAllowedSymbols(service.title, '&;') ||
+            !containsAllowedSymbols(service.desc, ',.!?;:') ||
+            !etLinesIconsData.includes(service.icon)
         ) {
             continue;
         }
