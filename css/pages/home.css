@@ -6,6 +6,7 @@
 @import url('../vendor/et-line.css');
 
 /*components*/
+@import '../components/social-metrics.css';
 @import '../components/services.css';
 @import '../components/btn.css';
 @import '../components/form.css';

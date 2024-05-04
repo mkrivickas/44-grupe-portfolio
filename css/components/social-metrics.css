@@ -1,0 +1,18 @@
+.social-metrics {
+    display: grid;
+}
+
+.social-metrics > .metric {
+    display: flex;
+    justify-content: center;
+}
+
+.number {
+    font-weight: bold;
+    color: rgb(243, 66, 54);
+    font-size: 4rem;
+}
+
+.label {
+    font-weight: normal;
+}

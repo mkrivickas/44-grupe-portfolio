@@ -1,7 +1,23 @@
 // IMPORTS
+import { servicesData } from '../../data/servicesData.js';
+import { socialMetricsData } from '../../data/socialMetricsData.js';
 import { services } from '../components/services.js';
+import { socialMetrics } from '../components/socialMetrics.js';
 
 // EXECUTION
+
+/* SOCIAL METRICS: start */
+
+const res = socialMetrics('#metrics_block', socialMetrics);
+const [isError, msg] = res;
+
+if (isError) {
+    console.error(msg);
+} else {
+    console.log(msg);
+}
+
+/* SOCIAL METRICS: end */
 
 /* HEADER: start */
 /* HEADER: end */
