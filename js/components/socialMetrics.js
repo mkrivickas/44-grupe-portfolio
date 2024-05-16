@@ -27,7 +27,7 @@ function socialMetrics(selector, data) {
 
     for (const item of data) {
         HTML += `<li class="metric">
-                  <div class="number">${item.number}</div>
+                  <div class="number">0${item.symbol}</div>
                   <div class="label">${item.label}</div>
                 </li >`;
     }
@@ -40,15 +40,24 @@ function socialMetrics(selector, data) {
     const animatedMetrics = new Array(metricsDOM.length).fill(false);
 
     window.addEventListener('scroll', () => {
-        let i = -1;
-        for (const metricDOM of metricsDOM) {
-            i++;
+        const totalLoadingTimeMs = 3000;
+        for (let i = 0; i < metricsDOM.length; i++) {
+            const metricDOM = metricsDOM[i];
+
             if (animatedMetrics[i]) {
                 continue;
             }
             if (isElementInViewport(metricDOM)) {
                 animatedMetrics[i] = true;
-                console.log('animuojame:', i);
+
+                let count = 0;
+                const timer = setInterval(() => {
+                    metricDOM.querySelector('.number').textContent =
+                        ++count + data[i].symbol;
+                    if (count >= data[i].number) {
+                        clearInterval(timer);
+                    }
+                }, totalLoadingTimeMs / data[i].number);
             }
         }
     });
